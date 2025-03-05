@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+@use "reset";
+// @forward "fonts";
+@use "mixins";
+@use "core";
+@use "variables";
+
+@use "./Blocks/header.scss";
+@use "./Blocks/footer.scss";
+@use "./Blocks/banner.scss";
+@use "./Blocks/motivation.scss";
+@use "./Blocks/button_arrow.scss";
+@use "./Blocks/training_types.scss";
+@use "./Blocks/join_us.scss";
+@use "./Blocks/location.scss";
+@use "./Blocks/family.scss";

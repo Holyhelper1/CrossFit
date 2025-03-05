@@ -1,0 +1,56 @@
+@use "../variables" as *;
+
+$trainingTypesItemBgIconSize: 80px;
+
+.training-types {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  background-color: $dark;
+
+  .training-types-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+
+    .training-types-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 32px;
+      padding-top: $trainingTypesItemBgIconSize;
+      background-image: url("/src/assets/images/Training-types/Training-arrow.svg");
+      background-position: 100% 0;
+      background-size: $trainingTypesItemBgIconSize;
+      background-repeat: no-repeat;
+      padding-bottom: 20px;
+
+      .training-types-title-item {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .training-types-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .training-types-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  .training-types-item {
+    padding-top: 40px !important;
+    background-size: 50px !important;
+    row-gap: 10px !important;
+
+    .training-types-image {
+      max-width: 120px;
+    }
+  }
+}

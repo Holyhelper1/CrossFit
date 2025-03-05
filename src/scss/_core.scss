@@ -1,0 +1,171 @@
+@use "variables" as *;
+
+body {
+  font-family: $font-family-base;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  color: $light-gray;
+  background-color: $dark;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: $transition-duration;
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+
+  &:hover {
+    color: $light-gray;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $light;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: calc($container-width + $container-padding-x * 2);
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+}
+
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.title-medium {
+  font-size: clamp(20px, 2.08vw, 40px);
+  line-height: 1.3;
+}
+
+.title-big {
+  z-index: 2;
+  font-size: clamp(24px, 3.12vw, 60px);
+  // background-color: aqua;
+}
+
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+  color: $light;
+  text-align: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 26px;
+  height: 38px;
+  border: none;
+  border-radius: $br-radius;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $dark;
+  background-color: $light;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(100% + 8px);
+    width: 46px;
+    aspect-ratio: 1;
+    background: url("/src//assets/Icons/plus-icon.svg") center/contain no-repeat;
+  }
+
+  &::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: -1;
+    top: -0.3em;
+    left: -0.7em;
+    font-family: $font-family-accent;
+    color: transparent;
+    font-size: 2.8em;
+    line-height: 1;
+    -webkit-text-stroke: 1px $dark-gray;
+  }
+}
+
+.centered {
+  &::after {
+    top: -0.25em;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+
+.input {
+  width: 100%;
+  height: $input-height;
+  padding-inline: 25px;
+  color: $light;
+  background-color: transparent;
+  border: 1px solid $light-gray;
+  border-radius: $br-radius;
+
+  &:hover {
+    border-color: $light;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $light-gray;
+    color: black;
+  }
+}
+// .input::placeholder {
+//   color: $light-gray;
+// }
+
+// .input::placeholder,
+// select.input:invalid {
+//   color: $dark-gray;
+// }

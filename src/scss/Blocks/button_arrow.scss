@@ -1,0 +1,46 @@
+@use "../variables" as *;
+.view-more-button-wrapper {
+  width: 193px;
+  height: 54px;
+  position: relative;
+  border: $border;
+  border-radius: 30px;
+  cursor: pointer;
+
+  .view-more-button {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .transparent {
+    height: 54px;
+    padding-left: 31px;
+    padding-right: 80px;
+    color: $light;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 2;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: var(--border);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      height: 100%;
+      aspect-ratio: 1;
+      border: $border;
+      border-radius: 50%;
+      background: url("/src/assets/Icons/button-arrow.svg") center/70% no-repeat;
+    }
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
