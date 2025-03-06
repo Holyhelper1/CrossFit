@@ -45,6 +45,8 @@ export const Header = () => {
         <button className="header-book-button button" type="button">
           Book now
         </button>
+
+        {/* сделать всплывающее окно бургер меню */}
         <button className="header-burger-button" type="button" title="Open menu">
           <span className="visually-hidden">Open menu</span>
         <svg

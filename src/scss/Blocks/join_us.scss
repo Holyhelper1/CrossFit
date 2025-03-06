@@ -111,6 +111,10 @@
       display: flex;
       justify-content: center;
       column-gap: 20px;
+
+      input {
+        width: 100%;
+      }
     }
   }
 

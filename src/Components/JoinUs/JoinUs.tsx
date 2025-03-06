@@ -4,7 +4,7 @@ import { ViewMoreButton } from "../View-more-button/View-more-button";
 export const JoinUs = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const [isPlaying, setIsPlaying] = useState(false); // Состояние воспроизведения
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayPause = () => {
     if (videoRef.current) {

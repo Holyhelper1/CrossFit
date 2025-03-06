@@ -1,0 +1,158 @@
+@use "../variables" as *;
+
+.calculate {
+  background-color: $dark-alternate;
+  padding-block: 146px;
+
+  .calculate-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+
+    .calculate-body {
+      flex-grow: 1;
+      max-width: 627px;
+
+      .calculate-title:not(:last-child) {
+        margin-bottom: 14px;
+      }
+      .calculate-description {
+        max-width: 385px;
+
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+      }
+
+      .calculate-form-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 30px;
+        margin-bottom: 20px;
+
+        .wide {
+          grid-column: -1 / 1;
+        }
+
+        &::not(:last-child) {
+          margin-bottom: 26px;
+        }
+      }
+    }
+
+    .calculate-table-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 610px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 100%;
+        aspect-ratio: 1;
+        background-color: $dark;
+        border-radius: 50%;
+      }
+
+      .calculate-table {
+        position: relative;
+        border-collapse: collapse;
+
+        th {
+          padding-block: 20px;
+          padding-right: 30px;
+          text-align: left;
+          text-transform: uppercase;
+          color: $light;
+        }
+
+        td {
+          padding-block: 14px;
+          padding-right: 30px;
+        }
+        tfoot {
+          color: $light;
+        }
+
+        tfoot td {
+          padding-top: 33px;
+          padding-bottom: 0;
+        }
+
+        :is(td, th):not(:first-child) {
+          padding-left: 30px;
+        }
+        :is(td, th):not(:last-child) {
+          border-right: 1px solid $light-gray;
+        }
+
+        tbody td {
+          border-top: 1px solid $light-gray;
+        }
+
+        tbody tr:last-child td:first-child {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 1px;
+            background-color: $light-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .calculate {
+    padding-block: 100px;
+
+    .calculate-inner {
+      column-gap: 20px;
+    }
+
+    .calculate-form-body {
+      grid-template-columns: 1fr !important;
+      margin-bottom: 20px;
+    }
+
+    .calculate-table {
+      td,
+      th {
+        padding-block: 10px !important;
+      }
+
+      tfoot {
+        padding-top: 10px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calculate {
+    padding-block: 60px;
+    
+    .calculate-inner {
+      flex-direction: column;
+      row-gap: 30px;
+
+      .calculate-table-wrapper {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

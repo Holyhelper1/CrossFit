@@ -1,10 +1,8 @@
 .location {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
 
   .location-map-image {
-    // width: 100%;
     height: auto;
   }
 
@@ -16,7 +14,7 @@
     padding: 80px 15px;
     text-align: center;
 
-    .location-title::not(:last-child) {
+    .location-title {
       margin-bottom: 14px;
     }
 
@@ -30,19 +28,17 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
 
- @media screen and (max-width: 1024px) {
-    .location {
-        display: flex;
-        flex-direction: column-reverse;
+    .location-body {
+      padding-block: 40px;
 
-        .location-body{
-            padding-block: 40px;
-
-            .location-description:not(:last-child) {
-                margin-bottom: 20px;
-            }
-        }
+      .location-description:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
-    
- }
+  }
+}

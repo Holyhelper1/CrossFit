@@ -44,3 +44,10 @@
     background-color: $light-gray;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .view-more-button-wrapper {
+    width: 100%;
+  }
+  
+}
