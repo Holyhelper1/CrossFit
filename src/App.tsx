@@ -6,7 +6,6 @@ import { JoinUs } from "./Components/JoinUs/JoinUs";
 import { Location } from "./Components/Location/Location";
 import { Motivation } from "./Components/Motivation/Motivation";
 import { TrainingTypes } from "./Components/Training-types/Training-types";
-import { Test55 } from "./Components/Calculate/test";
 import { Footer } from "./Components/Footer/Footer";
 
 function App() {
