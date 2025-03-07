@@ -60,6 +60,7 @@ $footer-logo-width: 20.77%;
 
     .footer-subscribe {
       position: relative;
+      display: flex;
 
       &:not(:last-child) {
         margin-bottom: 50px;
@@ -67,7 +68,7 @@ $footer-logo-width: 20.77%;
 
       .footer-subscribe-input {
         padding-right: 70px;
-        width: 302px;
+        flex: 1;
       }
 
       .footer-subscribe-button {

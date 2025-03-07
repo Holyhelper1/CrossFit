@@ -1,6 +1,5 @@
 import { ViewMoreButton } from "../View-more-button/View-more-button";
 
-
 //добавить рабочий калькулятор!
 export const Calculate = () => {
   return (
@@ -52,8 +51,12 @@ export const Calculate = () => {
               <label className="visually-hidden" htmlFor="gender">
                 Gender
               </label>
-              <select className="calculate-input input" id="gender">
-                <option value="" disabled selected>
+              <select
+                className="calculate-input input"
+                id="gender"
+                defaultValue="DEFAULT"
+              >
+                <option value="DEFAULT" disabled>
                   Gender
                 </option>
                 <option value="male">Male</option>
@@ -66,8 +69,9 @@ export const Calculate = () => {
               <select
                 className="calculate-input input wide"
                 id="activity-factor"
+                defaultValue={"DEFAULT"}
               >
-                <option value="" disabled selected>
+                <option value="DEFAULT" disabled>
                   Select an activity factor:
                 </option>
                 <option value="sedentary">Sedentary</option>
@@ -80,7 +84,7 @@ export const Calculate = () => {
             <ViewMoreButton children={"Calculate"} type={"submit"} />
           </form>
         </div>
-{/* сделать значения таблицы через map  */}
+        {/* сделать значения таблицы через map  */}
         <div className="calculate-table-wrapper">
           <table className="calculate-table">
             <caption className="visually-hidden">BMI table</caption>

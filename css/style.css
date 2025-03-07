@@ -357,13 +357,14 @@ input[type=number] {
 }
 .footer-main .footer-body .footer-subscribe {
   position: relative;
+  display: flex;
 }
 .footer-main .footer-body .footer-subscribe:not(:last-child) {
   margin-bottom: 50px;
 }
 .footer-main .footer-body .footer-subscribe .footer-subscribe-input {
   padding-right: 70px;
-  width: 302px;
+  flex: 1;
 }
 .footer-main .footer-body .footer-subscribe .footer-subscribe-button {
   position: absolute;
